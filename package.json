@@ -1,0 +1,19 @@
+{
+  "name": "choukrisafi_3_05082021",
+  "version": "0.1.0",
+  "description": "Ohmyfood, ordering meal preparation website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unknowida/ChoukriSafi_3_05082021.git"
+  },
+  "author": "Choukri Safi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unknowida/ChoukriSafi_3_05082021/issues"
+  },
+  "homepage": "https://github.com/unknowida/ChoukriSafi_3_05082021#readme"
+}
