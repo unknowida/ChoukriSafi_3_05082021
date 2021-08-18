@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/unknowida/ChoukriSafi_3_05082021/issues"
   },
-  "homepage": "https://github.com/unknowida/ChoukriSafi_3_05082021#readme"
+  "homepage": "https://github.com/unknowida/ChoukriSafi_3_05082021#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
 }
