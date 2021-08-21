@@ -4,7 +4,9 @@
   "description": "Ohmyfood, ordering meal preparation website.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "node-sass scss/main.scss dist/css/style.css",
+    "watch": "node-sass scss/main.scss dist/css/style.css -w",
+    "compressed": "node-sass scss/main.scss dist/css/style.css -w --output-style=compressed"
   },
   "repository": {
     "type": "git",

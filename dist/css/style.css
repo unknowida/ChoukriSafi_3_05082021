@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style: none; }
+
+.list {
+  padding: 1.5rem;
+  background-color: #1d1d1d; }
+  .list li {
+    display: inline-block;
+    margin-left: 1.5rem; }
+    .list li a {
+      color: #ebebeb; }
