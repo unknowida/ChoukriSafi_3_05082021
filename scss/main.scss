@@ -1,26 +1,12 @@
-// $color-primary: #39d1ff;
-// $color-success: #19ff66;
-// $bg-secondary: #242424;
-
-// body {
-//   background-color: $bg-secondary;
-// }
-// .display-1 {
-//   font-size: 2rem;
-//   color: $color-primary;
-// }
-
-// .display-2 {
-//   font-size: 2rem;
-//   color: $color-success;
-// }
-
 $bg-dark: #1d1d1d;
+$bg-primary: #389fff;
 $text-white: #ebebeb;
+$text-dark: #1d1d1d;
+$base-size: 16;
 
 * {
   margin: 0;
-  padding: 0;
+  padding: 2;
 }
 a {
   text-decoration: none;
@@ -29,15 +15,32 @@ li {
   list-style: none;
 }
 
-.list {
+@function pxToRem($target, $context: $base-size) {
+  @return ($target / $context) * 1rem;
+}
+
+@mixin navbar($text-color, $bg-color) {
   padding: 1.5rem;
-  background-color: $bg-dark;
+  background-color: $bg-color;
   li {
     display: inline-block;
-    margin-left: 1.5rem;
-
+    margin-left: 2rem;
+    &:first-child {
+      margin: 0;
+    }
     a {
-      color: $text-white;
+      color: $text-color;
+      &:hover {
+        border-bottom: 2px solid $text-white;
+        padding-bottom: 0.2rem;
+      }
     }
   }
+}
+
+.list_1 {
+  @include navbar($text-white, $bg-dark);
+}
+.list_2 {
+  @include navbar($text-dark, $bg-primary);
 }
