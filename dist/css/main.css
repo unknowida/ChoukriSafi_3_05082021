@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Box sizing rules */
 *,
 *::before,
@@ -39,8 +40,7 @@ a:not([class]) {
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
-  display: block; }
+  max-width: 100%; }
 
 /* Inherit fonts for inputs and buttons */
 input,
@@ -68,8 +68,28 @@ select {
   background-color: #e9e9e9; }
   .header__logo {
     background: white;
-    width: 160%;
+    width: 100%;
     text-align: center;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
     border-bottom: 2px solid #f4f4f4;
     padding: 5px 46px; }
+    .header__logo img {
+      height: 50px;
+      width: 160px; }
+
+/*Identité graphique*/
+/*polices*/
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  overflow-x: hidden; }
+
+h1 {
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: bold; }
