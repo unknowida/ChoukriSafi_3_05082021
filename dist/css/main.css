@@ -142,31 +142,46 @@ th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: white;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
   width: 100%;
   gap: 16px;
   padding: 30px 10px;
 }
 
-.reservation h1 {
-  width: 100%;
-  font-size: 25px;
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+  font-family: 'Roboto', sans-serif;
   font-weight: bold;
-}
-
-.reservation h2 {
+  text-align: center;
   width: 100%;
+  gap: 16px;
+  padding: 30px 10px;
 }
 
 /*Identité graphique*/
@@ -177,13 +192,16 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 0.875rem;
   line-height: 1.5;
-  margin: 0;
+  margin: 0 auto;
   text-align: left;
   overflow-x: hidden;
+  max-width: 1440px;
 }
 
 h1 {
   line-height: 1;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 h2 {
