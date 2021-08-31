@@ -1,0 +1,33 @@
+// .main-button {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   button {
+//     border-radius: 32px;
+//     box-shadow: 1px 5px 7px 0px hsl(0deg 0% 70%);
+//     background: linear-gradient(173deg, $color-secondary, $color-primary);
+//     color: white;
+//     padding: 16px 24px;
+//     border: none;
+//   }
+// }
+
+button {
+  display: flex;
+  // display: inline-block;
+  text-align: center;
+  background: linear-gradient($color-secondary, $color-primary);
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #fff;
+  box-shadow: 0 5px 15px 0 #c3c3c3;
+  font-weight: bold;
+  margin: 0 0.3em 0.3em 0;
+  padding: 15px 30px;
+  transition: 0.3s;
+}

@@ -17,3 +17,50 @@
     }
   }
 }
+.search__geo {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 180px;
+
+  .search__icons {
+    padding: 8px 10px;
+  }
+  .input-field {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 0px;
+    flex: 1 0 0;
+    input {
+      font-weight: normal;
+
+      background-color: transparent;
+      border: 0;
+      padding: 15px 10px;
+      width: 100%;
+    }
+  }
+}
+
+.reservation {
+  display: flex;
+  background: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  text-align: center;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 16px;
+  padding: 30px 10px;
+
+  & h1 {
+    width: 100%;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  & h2 {
+    width: 100%;
+  }
+}

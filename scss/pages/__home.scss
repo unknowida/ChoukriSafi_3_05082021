@@ -1,16 +1,21 @@
 body {
-    background-color: #fff;
-    color: #333;
-    font-family: Roboto, sans-serif;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    margin: 0;
-    text-align: left;
-    overflow-x: hidden;
-  }
-  
-  h1 {
-    font-size: 1.5em;
-    line-height: 1;
-    font-weight: bold;
-  }
+  background-color: #fff;
+  color: #333;
+  font-family: Roboto, sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: left;
+  overflow-x: hidden;
+}
+
+h1 {
+  // font-size: 1.5em;
+  line-height: 1;
+  // font-weight: bold;
+}
+h2 {
+  font-size: 15px;
+  font-weight: normal;
+  color: #888;
+}
