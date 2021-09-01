@@ -80,6 +80,31 @@ th {
   padding: 0;
 }
 
+/*Identité graphique*/
+/*polices*/
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(#ff79da, #9356dc);
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #fff;
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
+  font-weight: bold;
+  margin: 0 0.3em 0.3em 0;
+  padding: 15px 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,7 +156,7 @@ th {
 }
 
 .search__geo .input-field input {
-  font-weight: normal;
+  font-weight: bold;
   background-color: transparent;
   border: 0;
   padding: 15px 10px;
@@ -152,13 +177,13 @@ th {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: white;
+  background-color: #f2f2f2;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-align: center;
   width: 100%;
   gap: 16px;
-  padding: 30px 10px;
+  padding: 30px 20px;
 }
 
 .fonctionnement {
@@ -184,8 +209,6 @@ th {
   padding: 30px 10px;
 }
 
-/*Identité graphique*/
-/*polices*/
 body {
   background-color: #fff;
   color: #333;
@@ -208,28 +231,5 @@ h2 {
   font-size: 15px;
   font-weight: normal;
   color: #888;
-}
-
-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
-  text-decoration: none;
-  cursor: pointer;
-  border: 0;
-  text-align: center;
-  border-radius: 25px;
-  font-size: 15px;
-  color: #fff;
-  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
-          box-shadow: 0 5px 15px 0 #c3c3c3;
-  font-weight: bold;
-  margin: 0 0.3em 0.3em 0;
-  padding: 15px 30px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
 }
 /*# sourceMappingURL=main.css.map */

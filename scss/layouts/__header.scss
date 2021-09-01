@@ -31,8 +31,7 @@
     -ms-flex: 1 0 0px;
     flex: 1 0 0;
     input {
-      font-weight: normal;
-
+      font-weight: bold;
       background-color: transparent;
       border: 0;
       padding: 15px 10px;
@@ -46,11 +45,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: white;
+  background-color: #f2f2f2;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-align: center;
   width: 100%;
   gap: 16px;
-  padding: 30px 10px;
+  padding: 30px 20px;
 }

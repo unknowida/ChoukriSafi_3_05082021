@@ -1,7 +1,8 @@
 @import './base/reset';
-@import './layouts/__header';
-@import './layouts/_aside';
 @import './utils/__var';
+@import './components/__buttons';
+@import './layouts/__header';
+@import './layouts/__aside';
+@import './layouts/_article';
 @import './pages/__home';
 @import './pages/__meal';
-@import './components/__buttons';
