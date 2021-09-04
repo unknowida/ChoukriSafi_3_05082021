@@ -111,6 +111,7 @@ p {
 h2 {
   margin: 50px 0 30px 6.5%;
   font-size: 1.6rem;
+  font-weight: bold;
 }
 
 /*Identité graphique*/
@@ -158,32 +159,43 @@ aside.fonctionnement {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 0 50px 0;
+  counter-reset: step-counter;
 }
 
 .fonctionnement ol li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #f2f2f2;
-  height: 80px;
   min-width: 50%;
   font-size: large;
   margin: 15px 15px;
   border-radius: 25px;
-  padding: 30px 20px;
+  padding: 30px 10px 20px 10px;
   -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
           box-shadow: 0 5px 15px 0 #c3c3c3;
 }
 
-.fonctionnement ol i {
+.fonctionnement ol li::before {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background-color: #f2f2f2;
+  font-size: large;
+  border-radius: 50%;
+  width: 30px;
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
+  counter-increment: step-counter;
+  content: counter(step-counter);
+}
+
+i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,6 +209,39 @@ aside.fonctionnement {
   margin: 0px 30px 0px 20px;
   font-size: larger;
   color: grey;
+}
+
+.restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f2f2f2;
+  padding: 0 0 30px 0;
+}
+
+.restaurants_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 251px;
+  width: 85%;
+  background-color: white;
+  margin: 20px auto;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 10px 5px #f2f2f2;
+          box-shadow: 0 0 10px 5px #f2f2f2;
+  position: relative;
 }
 
 .header {
@@ -239,21 +284,17 @@ aside.fonctionnement {
   width: 180px;
 }
 
-.search__geo .search__icons {
-  padding: 8px 10px;
-}
-
 .search__geo .input-field {
   -webkit-box-flex: 1;
-  -ms-flex: 1 0 0px;
-  flex: 1 0 0;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
 }
 
 .search__geo .input-field input {
   font-weight: bold;
   background-color: transparent;
   border: 0;
-  padding: 15px 10px;
+  padding: 15px 0px;
   width: 100%;
 }
 
