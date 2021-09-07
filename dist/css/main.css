@@ -80,6 +80,11 @@ th {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -105,7 +110,6 @@ h1 {
 p {
   font-size: 16px;
   font-weight: 400;
-  color: #8d8d8d;
 }
 
 h2 {
@@ -117,6 +121,53 @@ h2 {
 /*Identité graphique*/
 /*couleurs répétitive*/
 /*polices*/
+.fa-heart {
+  width: 35px;
+  height: 35px;
+  position: relative;
+}
+
+.fa-heart.icon--empty {
+  font-size: 25px;
+  position: absolute;
+  margin: 20px 0 0 35px;
+  padding: 2px 0 0 0;
+  opacity: 1;
+  -webkit-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+}
+
+.fa-heart.icon--full {
+  font-size: 25px;
+  position: absolute;
+  display: block;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff79da), color-stop(45%), to(#9356dc));
+  background-image: linear-gradient(to top right, #ff79da, 45%, #9356dc);
+  background-clip: text;
+  color: transparent;
+  opacity: 0;
+  margin: 20px 0 0 35px;
+  padding: 2px 0 0 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.fa-heart:hover, .fa-heart:active {
+  cursor: pointer;
+}
+
+.menu--heart:hover .icon--full, .menu--heart:active .restaurants_card--heart:hover .icon--full, .restaurants_card--heart:active .icon--full {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  opacity: 1;
+}
+
+.menu--heart:hover .icon--empty, .menu--heart:active .restaurants_card--heart:hover .icon--empty, .restaurants_card--heart:active .icon--empty {
+  opacity: 0;
+}
+
 button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -140,17 +191,6 @@ button {
   transition: 0.3s;
 }
 
-aside.fonctionnement {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: white;
-}
-
 .fonctionnement ol {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,6 +204,12 @@ aside.fonctionnement {
           align-items: center;
   margin: 0 0 50px 0;
   counter-reset: step-counter;
+}
+
+.fonctionnement ol.step_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .fonctionnement ol li {
@@ -189,10 +235,6 @@ aside.fonctionnement {
 }
 
 .fonctionnement ol li::before {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: absolute;
   background-color: #f2f2f2;
   font-size: large;
   border-radius: 50%;
@@ -207,9 +249,31 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0px 30px 0px 20px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: larger;
   color: grey;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #f2f2f2;
 }
 
 .restaurants {
@@ -243,6 +307,80 @@ i {
   -webkit-box-shadow: 0 0 10px 5px #f2f2f2;
           box-shadow: 0 0 10px 5px #f2f2f2;
   position: relative;
+}
+
+.restaurants_card--location {
+  font-weight: 300;
+}
+
+.restaurants_card--new {
+  color: #008766;
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 80px;
+  height: 30px;
+  background-color: #99e2d0;
+  text-align: center;
+  line-height: 30px;
+  font-size: 0.9em;
+}
+
+.restaurants_card img {
+  height: 174px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurants_card--heart {
+  width: 70px;
+  height: 70px;
+  padding-right: 10px;
+}
+
+.restaurants_card--txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 77px;
+}
+
+.restaurants_card--p {
+  padding: 15px 0 0 10px;
+}
+
+.restaurants_card--p p {
+  margin: 0 0 5px 3px;
+}
+
+.restaurants_card--name {
+  font-weight: bolder;
+}
+
+.restaurants h2 {
+  margin: 10px;
+}
+
+.restaurants-1,
+.restaurants-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -20px;
 }
 
 .header {
@@ -282,7 +420,13 @@ i {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  width: 180px;
+}
+
+.search__geo .search__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 5px;
 }
 
 .search__geo .input-field {
@@ -320,5 +464,42 @@ i {
   width: 100%;
   gap: 16px;
   padding: 40px 50px 30px 50px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #333232;
+  color: #cccccc;
+  padding: 10px 0 20px 30px;
+}
+
+footer p {
+  font-family: Shrikhand;
+  font-size: 2rem bolder;
+  padding: 15px 0;
+}
+
+footer a {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+footer li {
+  padding: 3px 0;
+  font-size: 0.7rem;
+}
+
+footer i {
+  padding: 0 10px 0 0;
+  color: #cccccc;
 }
 /*# sourceMappingURL=main.css.map */

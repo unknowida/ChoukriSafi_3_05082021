@@ -1,7 +1,7 @@
 aside.fonctionnement {
-  display: flex;
-  flex-direction: column;
-  background-color: white;
+  // display: flex;
+  // flex-direction: column;
+  // background-color: white;
 }
 
 .fonctionnement ol {
@@ -11,6 +11,10 @@ aside.fonctionnement {
   margin: 0 0 50px 0;
   counter-reset: step-counter;
 
+  &.step_box {
+    display: flex;
+  }
+
   li {
     display: flex;
     flex-direction: row;
@@ -18,18 +22,16 @@ aside.fonctionnement {
     background-color: $color-grey;
     height: 80px;
     min-width: 85%;
-    font-size:large;
+    font-size: large;
     margin: 15px 15px;
     border-radius: 25px;
     padding: 24px 10px 20px 10px;
     box-shadow: 0 5px 15px 0 #c3c3c3;
-
-  
   }
 
-  li::before {
-    display: flex;
-    position: absolute;
+  & li::before {
+    // display: flex;
+    // position: sticky;
     background-color: $color-grey;
     font-size: large;
     border-radius: 50%;
@@ -38,33 +40,29 @@ aside.fonctionnement {
     counter-increment: step-counter;
     content: counter(step-counter);
   }
-  
-
 }
- i {
-    display: flex;
-    // flex-direction: row;
-    // align-items: center;
-    margin: 0px 30px 0px 20px;
-    font-size: larger;
-    color: grey;
-  }
+i {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // margin: 0px 30px;
+  font-size: larger;
+  color: grey;
+}
 
+// .fonctionnement ol {
+//   display: flex;
+//   flex-direction: column;
+//   margin: 0 0 50px 0;
+//   counter-reset: step-counter;
 
-  // .fonctionnement ol {
-  //   display: flex;
-  //   flex-direction: column;
-  //   margin: 0 0 50px 0;
-  //   counter-reset: step-counter;
-  
-  
-  //   li::before {
-  //     position: absolute;
-  //     background-color: $color-grey;
-  //     font-size: large;
-  //     border-radius: 50%;
-  //     width: 20px;
-  //     box-shadow: 0 5px 15px 0 #c3c3c3;
-  //     counter-increment: step-counter;
-  //     content: counter(step-counter);
-  //   }
+//   li::before {
+//     position: absolute;
+//     background-color: $color-grey;
+//     font-size: large;
+//     border-radius: 50%;
+//     width: 20px;
+//     box-shadow: 0 5px 15px 0 #c3c3c3;
+//     counter-increment: step-counter;
+//     content: counter(step-counter);
+//   }
