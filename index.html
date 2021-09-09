@@ -49,31 +49,35 @@
         <p>
           Découvrez des restaurants d'exception, sélectionnées par nos soins.
         </p>
-        <button class="main-button">
+        <button class="main--button">
           Explorer nos restaurants
         </button>
       </div>
     </header>
     <main>
-      <aside class="fonctionnement">
-        <h2>Fonctionnement</h2>
-        <ol class="step_box">
-          <li>
-            <i class="fas fa-mobile-alt"></i>
-            Choisissez un restaurant
-          </li>
-          <li>
-            <i class="fas fa-list"></i>
-            Composez votre menu
-          </li>
-          <li>
-            <i class="fas fa-store"></i>
-            Dégustez au restaurant
-          </li>
-        </ol>
+      <aside class="fonctionnement_container">
+        <div class="fonctionnement">
+          <h2 class="fonctionnement__title">Fontionnement</h2>
+          <div class="fonctionnement__steps">
+            <ol>
+              <li class="fontionnement__step">
+                <i class="fas fa-mobile-alt"></i>
+                Choisissez un restaurant
+              </li>
+              <li class="fontionnement__step">
+                <i class="fas fa-list"></i>
+                Composez votre menu
+              </li>
+              <li class="fontionnement__step">
+                <i class="fas fa-store"></i>
+                Dégustez au restaurant
+              </li>
+            </ol>
+          </div>
+        </div>
       </aside>
       <section>
-        <div class="wrapper">
+        <div class="restaurants">
           <h2>Restaurants</h2>
           <div class="restaurants_card">
             <a href="./palette_du_gout.html">
@@ -103,21 +107,21 @@
     <footer>
       <p>ohmyfood</p>
       <ul>
-          <li>
-              <i class="fas fa-utensils fa-fw"></i>
-              <a href="#">Proposer un restaurant</a>
-          </li>
-          <li>
-              <i class="fas fa-hands-helping fa-fw"></i>
-              <a href="#">Devenir partenaire</a>
-          </li>
-          <li>
-              <a href="#">Mentions légales</a>
-          </li>
-          <li>
-              <a href="mailto:contact@ohmyfood.com">Contact</a>
-          </li>
+        <li>
+          <i class="fas fa-utensils fa-fw"></i>
+          <a href="#">Proposer un restaurant</a>
+        </li>
+        <li>
+          <i class="fas fa-hands-helping fa-fw"></i>
+          <a href="#">Devenir partenaire</a>
+        </li>
+        <li>
+          <a href="#">Mentions légales</a>
+        </li>
+        <li>
+          <a href="mailto:contact@ohmyfood.com">Contact</a>
+        </li>
       </ul>
-  </footer>
+    </footer>
   </body>
 </html>

@@ -1,54 +1,118 @@
-aside.fonctionnement {
-  // display: flex;
-  // flex-direction: column;
-  // background-color: white;
+.fonctionnement_container {
+  @include flexbox-center;
+  padding: 25px 0;
+  width: 100%;
+  background: white;
+  flex-direction: column;
 }
 
-.fonctionnement ol {
+.fonctionnement {
+  width: 95%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin: 0 0 50px 0;
   counter-reset: step-counter;
-
-  &.step_box {
-    display: flex;
+  &__title {
+    margin: 0;
   }
 
+  &__step {
+    display: flex;
+    align-items: center;
+    background: #f6f6f6;
+    height: auto;
+    width: auto;
+    margin: 10px 20px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+    counter-increment: step-counter;
+    content: counter(step-counter);
+    &:hover {
+      @include button-hover;
+      background: lighten(#f7f7f7, 3%);
+    }
+  }
+  &__steps {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
   li {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     background-color: $color-grey;
     height: 80px;
     min-width: 85%;
-    font-size: large;
+    font-size: medium;
     margin: 15px 15px;
     border-radius: 25px;
     padding: 24px 10px 20px 10px;
     box-shadow: 0 5px 15px 0 #c3c3c3;
   }
-
-  & li::before {
-    // display: flex;
-    // position: sticky;
-    background-color: $color-grey;
-    font-size: large;
-    border-radius: 50%;
-    width: 30px;
-    box-shadow: 0 5px 15px 0 #c3c3c3;
+  i {
+    font-size: larger;
+    color: grey;
+  }
+  li::before {
     counter-increment: step-counter;
     content: counter(step-counter);
+    position: absolute;
+    // float: left;
+    left: 15px;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    line-height: 30px;
+    color: white;
+    box-shadow: 0 5px 15px 0 #c3c3c3;
+    background-color: $color-primary;
   }
 }
-i {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  // margin: 0px 30px;
-  font-size: larger;
-  color: grey;
-}
+
+//   li {
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: space-around;
+//     background-color: $color-grey;
+//     height: 80px;
+//     min-width: 85%;
+//     font-size: medium;
+//     margin: 15px 15px;
+//     border-radius: 25px;
+//     padding: 24px 10px 20px 10px;
+//     box-shadow: 0 5px 15px 0 #c3c3c3;
+//   }
+
+//   & li::before {
+//     // display: flex;
+//     // position: sticky;
+//     background-color: $color-grey;
+//     font-size: large;
+//     border-radius: 50%;
+//     width: 30px;
+//     box-shadow: 0 5px 15px 0 #c3c3c3;
+//     counter-increment: step-counter;
+//     content: counter(step-counter);
+//     margin-left: -25px;
+//     margin-right: 8px;
+//   }
+// }
+// i {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   // margin: 0px 30px;
+//   font-size: larger;
+//   color: grey;
+// }
 
 // .fonctionnement ol {
 //   display: flex;

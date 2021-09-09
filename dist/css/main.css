@@ -37,7 +37,7 @@ h6 {
   font-weight: normal;
 }
 
-ul {
+ul, li {
   list-style: none;
 }
 
@@ -109,16 +109,17 @@ h1 {
 
 p {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 300;
+  text-align: center;
 }
 
 h2 {
-  margin: 50px 0 30px 6.5%;
   font-size: 1.6rem;
   font-weight: bold;
 }
 
 /*Identité graphique*/
+/*Gradient répétitif*/
 /*couleurs répétitive*/
 /*polices*/
 .fa-heart {
@@ -141,8 +142,8 @@ h2 {
   font-size: 25px;
   position: absolute;
   display: block;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#ff79da), color-stop(45%), to(#9356dc));
-  background-image: linear-gradient(to top right, #ff79da, 45%, #9356dc);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   background-clip: text;
   color: transparent;
   opacity: 0;
@@ -174,7 +175,7 @@ button {
   display: flex;
   text-align: center;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
   text-decoration: none;
   cursor: pointer;
   border: 0;
@@ -182,8 +183,8 @@ button {
   border-radius: 25px;
   font-size: 16px;
   color: #fff;
-  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
-          box-shadow: 0 5px 15px 0 #c3c3c3;
+  -webkit-box-shadow: 0 5px 15px 0 #7e7878;
+          box-shadow: 0 5px 15px 0 #7e7878;
   font-weight: bold;
   margin: 20px 0 55px 0;
   padding: 18px 30px;
@@ -191,7 +192,39 @@ button {
   transition: 0.3s;
 }
 
-.fonctionnement ol {
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
+          box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
+}
+
+.fonctionnement_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0;
+  width: 100%;
+  background: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fonctionnement {
+  width: 95%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -199,20 +232,56 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0 0 50px 0;
   counter-reset: step-counter;
 }
 
-.fonctionnement ol.step_box {
+.fonctionnement__title {
+  margin: 0;
+}
+
+.fonctionnement__step {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f6f6f6;
+  height: auto;
+  width: auto;
+  margin: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  counter-increment: step-counter;
+  content: counter(step-counter);
 }
 
-.fonctionnement ol li {
+.fonctionnement__step:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
+          box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
+  background: white;
+}
+
+.fonctionnement__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fonctionnement li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,10 +292,12 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: #f2f2f2;
   height: 80px;
   min-width: 85%;
-  font-size: large;
+  font-size: medium;
   margin: 15px 15px;
   border-radius: 25px;
   padding: 24px 10px 20px 10px;
@@ -234,59 +305,35 @@ button {
           box-shadow: 0 5px 15px 0 #c3c3c3;
 }
 
-.fonctionnement ol li::before {
-  background-color: #f2f2f2;
-  font-size: large;
-  border-radius: 50%;
-  width: 30px;
-  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
-          box-shadow: 0 5px 15px 0 #c3c3c3;
-  counter-increment: step-counter;
-  content: counter(step-counter);
-}
-
-i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.fonctionnement i {
   font-size: larger;
   color: grey;
 }
 
-.wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.fonctionnement li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 30px;
+  color: white;
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
+  background-color: #9356dc;
+}
+
+.restaurants {
   padding: 10px;
   margin-top: 15px;
   background-color: #f2f2f2;
 }
 
 .restaurants {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   background-color: #f2f2f2;
   padding: 0 0 30px 0;
 }
@@ -447,23 +494,43 @@ i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: #f2f2f2;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-align: center;
   width: 100%;
   gap: 16px;
-  padding: 40px 50px 30px 50px;
+  padding: 40px 30px 30px 30px;
+}
+
+.reservation__button {
+  opacity: 1;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  color: white;
+  padding: 0 20px;
+  border-radius: 200px;
+  -webkit-box-shadow: 0px 0px 10px 0px black rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 10px 0px black rgba(0, 0, 0, 0.6);
+}
+
+.reservation__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
+          box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
 }
 
 footer {
