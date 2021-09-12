@@ -14,6 +14,7 @@ figure,
 fieldset,
 legend,
 textarea,
+span,
 pre,
 iframe,
 hr,
@@ -107,7 +108,7 @@ h1 {
   font-weight: bold;
 }
 
-p {
+span {
   font-size: 16px;
   font-weight: 300;
   text-align: center;
@@ -122,53 +123,6 @@ h2 {
 /*Gradient répétitif*/
 /*couleurs répétitive*/
 /*polices*/
-.fa-heart {
-  width: 35px;
-  height: 35px;
-  position: relative;
-}
-
-.fa-heart.icon--empty {
-  font-size: 25px;
-  position: absolute;
-  margin: 20px 0 0 35px;
-  padding: 2px 0 0 0;
-  opacity: 1;
-  -webkit-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
-}
-
-.fa-heart.icon--full {
-  font-size: 25px;
-  position: absolute;
-  display: block;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
-  color: transparent;
-  opacity: 0;
-  margin: 20px 0 0 35px;
-  padding: 2px 0 0 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-.fa-heart:hover, .fa-heart:active {
-  cursor: pointer;
-}
-
-.menu--heart:hover .icon--full, .menu--heart:active .restaurants_card--heart:hover .icon--full, .restaurants_card--heart:active .icon--full {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 1;
-}
-
-.menu--heart:hover .icon--empty, .menu--heart:active .restaurants_card--heart:hover .icon--empty, .restaurants_card--heart:active .icon--empty {
-  opacity: 0;
-}
-
 button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -201,135 +155,26 @@ button:hover {
           box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
 }
 
-.fonctionnement_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 25px 0;
-  width: 100%;
-  background: white;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.fonctionnement {
-  width: 95%;
-  max-width: 1200px;
-  background-color: white;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  counter-reset: step-counter;
-}
-
-.fonctionnement__title {
-  margin: 0;
-}
-
-.fonctionnement__step {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #f6f6f6;
-  height: auto;
-  width: auto;
-  margin: 10px 20px;
-  border-radius: 20px;
-  position: relative;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-  counter-increment: step-counter;
-  content: counter(step-counter);
-}
-
-.fonctionnement__step:hover {
-  opacity: 0.8;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  -webkit-box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
-          box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
-  background: white;
-}
-
-.fonctionnement__steps {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.fonctionnement li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  background-color: #f2f2f2;
-  height: 80px;
-  min-width: 85%;
-  font-size: medium;
-  margin: 15px 15px;
-  border-radius: 25px;
-  padding: 24px 10px 20px 10px;
-  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
-          box-shadow: 0 5px 15px 0 #c3c3c3;
-}
-
-.fonctionnement i {
-  font-size: larger;
-  color: grey;
-}
-
-.fonctionnement li::before {
-  counter-increment: step-counter;
-  content: counter(step-counter);
-  position: absolute;
-  left: 15px;
-  text-align: center;
-  font-size: 1rem;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  line-height: 30px;
-  color: white;
-  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
-          box-shadow: 0 5px 15px 0 #c3c3c3;
-  background-color: #9356dc;
-}
-
 .restaurants {
-  padding: 10px;
-  margin-top: 15px;
+  margin: 0;
+  padding: 20px;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   background-color: #f2f2f2;
 }
 
@@ -402,11 +247,11 @@ button:hover {
   height: 77px;
 }
 
-.restaurants_card--p {
+.restaurants_card--span {
   padding: 15px 0 0 10px;
 }
 
-.restaurants_card--p p {
+.restaurants_card--span span {
   margin: 0 0 5px 3px;
 }
 
@@ -428,6 +273,43 @@ button:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: -20px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #333232;
+  color: #cccccc;
+  padding: 10px 0 20px 30px;
+}
+
+footer span {
+  font-family: Shrikhand;
+  font-size: 2rem bolder;
+  padding: 15px 0;
+}
+
+footer a {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+footer li {
+  padding: 3px 0;
+  font-size: 0.7rem;
+}
+
+footer i {
+  padding: 0 10px 0 0;
+  color: #cccccc;
 }
 
 .header {
@@ -533,7 +415,30 @@ button:hover {
           box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
 }
 
-footer {
+.fonctionnement_containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 0;
+  width: 100%;
+  background: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fonctionnement {
+  width: 95%;
+  max-width: 1200px;
+  background-color: white;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,32 +446,79 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-color: #333232;
-  color: #cccccc;
-  padding: 10px 0 20px 30px;
+  counter-reset: step-counter;
 }
 
-footer p {
-  font-family: Shrikhand;
-  font-size: 2rem bolder;
-  padding: 15px 0;
+.fonctionnement__title {
+  margin: 0;
 }
 
-footer a {
-  color: #cccccc;
-  font-size: 0.9rem;
+.fonctionnement__steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-footer li {
-  padding: 3px 0;
-  font-size: 0.7rem;
+.fonctionnement li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #f2f2f2;
+  height: 80px;
+  min-width: 85%;
+  font-size: medium;
+  margin: 15px 15px;
+  border-radius: 25px;
+  padding: 24px 10px 20px 10px;
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
 }
 
-footer i {
-  padding: 0 10px 0 0;
-  color: #cccccc;
+.fonctionnement li:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
+          box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
+  background: white;
+}
+
+.fonctionnement i {
+  font-size: larger;
+  color: grey;
+}
+
+.fonctionnement li::before {
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  line-height: 30px;
+  color: white;
+  -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
+          box-shadow: 0 5px 15px 0 #c3c3c3;
+  background-color: #9356dc;
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,14 @@
 .restaurants {
- 
-  padding: 10px;
-  margin-top: 15px;
+  margin: 0;
+  padding: 20px;
+  max-width: 1200px;
+  @include flexbox-center;
+  flex-direction: column;
+  align-items: flex-start;
   background-color: $color-grey;
 }
 
 .restaurants {
- 
   background-color: $color-grey;
   padding: 0 0 30px 0;
 
@@ -20,9 +22,11 @@
     border-radius: 20px;
     box-shadow: 0 0 10px 5px $color-grey;
     position: relative;
+
     &--location {
       font-weight: 300;
     }
+
     &--new {
       color: $color-new;
       display: block;
@@ -36,33 +40,40 @@
       line-height: 30px;
       font-size: 0.9em;
     }
+
     img {
       height: 174px;
       width: 100%;
       object-fit: cover;
       border-radius: 15px 15px 0 0;
     }
+
     &--heart {
       width: 70px;
       height: 70px;
       padding-right: 10px;
     }
+
     &--txt {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       height: 77px;
     }
-    &--p {
+
+    &--span {
       padding: 15px 0 0 10px;
-      p {
+
+      span {
         margin: 0 0 5px 3px;
       }
     }
+
     &--name {
       font-weight: bolder;
     }
   }
+
   h2 {
     margin: 10px;
   }

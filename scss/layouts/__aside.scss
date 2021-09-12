@@ -1,4 +1,4 @@
-.fonctionnement_container {
+.fonctionnement_containers {
   @include flexbox-center;
   padding: 25px 0;
   width: 100%;
@@ -14,32 +14,28 @@
   display: flex;
   flex-direction: column;
   counter-reset: step-counter;
+
   &__title {
     margin: 0;
   }
 
-  &__step {
-    display: flex;
-    align-items: center;
-    background: #f6f6f6;
-    height: auto;
-    width: auto;
-    margin: 10px 20px;
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-    counter-increment: step-counter;
-    content: counter(step-counter);
-    &:hover {
-      @include button-hover;
-      background: lighten(#f7f7f7, 3%);
-    }
-  }
+  // &__step {
+  // display: flex;
+  // align-items: center;
+  // background: #f6f6f6;
+  // height: auto;
+  // width: auto;
+  // margin: 10px 20px;
+  // border-radius: 20px;
+  // position: relative;
+  // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  // }
   &__steps {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
+
   li {
     display: flex;
     flex-direction: row;
@@ -53,11 +49,18 @@
     border-radius: 25px;
     padding: 24px 10px 20px 10px;
     box-shadow: 0 5px 15px 0 #c3c3c3;
+
+    &:hover {
+      @include button-hover;
+      background: lighten(#f7f7f7, 3%);
+    }
   }
+
   i {
     font-size: larger;
     color: grey;
   }
+
   li::before {
     counter-increment: step-counter;
     content: counter(step-counter);

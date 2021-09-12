@@ -30,6 +30,12 @@
   </head>
 
   <body class="home">
+    <!-- Loading spinner -->
+    <div class="container">
+      <div class="circle circle--red"></div>
+      <div class="circle circle--blue"></div>
+      <div class="circle circle--green"></div>
+    </div>
     <header class="header">
       <div class="header__logo">
         <a href="index.html">
@@ -46,18 +52,18 @@
       </form>
       <div class="reservation">
         <h1>Réservez le menu qui vous convient</h1>
-        <p>
+        <span>
           Découvrez des restaurants d'exception, sélectionnées par nos soins.
-        </p>
+        </span>
         <button class="main--button">
           Explorer nos restaurants
         </button>
       </div>
     </header>
     <main>
-      <aside class="fonctionnement_container">
+      <aside class="fonctionnement_containers">
         <div class="fonctionnement">
-          <h2 class="fonctionnement__title">Fontionnement</h2>
+          <h2 class="fonctionnement__title">Fonctionnement</h2>
           <div class="fonctionnement__steps">
             <ol>
               <li class="fontionnement__step">
@@ -88,11 +94,66 @@
               />
             </a>
             <div class="restaurants_card--txt">
-              <div class="restaurants_card--p">
-                <a href="./lapalettedugout.html">
-                  <p class="restaurants_card--name">La palette du goût</p>
-                </a>
+              <div class="restaurants_card--span">
+                <span class="restaurants_card--name">La palette du goût</span>
                 <p class="restaurants_card--location">Ménilmontant</p>
+              </div>
+              <div class="restaurants_card--heart">
+                <i class="far fa-heart fa-lg icon--empty"></i>
+                <i class="fas fa-heart fa-lg icon--full"></i>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants_card">
+            <a href="./note_enchanté.html">
+            <div class="restaurants_card--new">Nouveau</div>
+              <img
+                src="./img/restaurants/note_enchantée.jpg"
+                alt="Assiette dressée sur une table"
+              />
+            </a>
+            <div class="restaurants_card--txt">
+              <div class="restaurants_card--span">
+                <span class="restaurants_card--name">La note enchantée</span>
+                <p class="restaurants_card--location">Charonne</p>
+              </div>
+              <div class="restaurants_card--heart">
+                <i class="far fa-heart fa-lg icon--empty"></i>
+                <i class="fas fa-heart fa-lg icon--full"></i>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants_card">
+            <a href="./la_française.html">
+              <div class="restaurants_card--new">Nouveau</div>
+              <img
+                src="./img/restaurants/la_française.jpg"
+                alt="Assiette dressée sur une table"
+              />
+            </a>
+            <div class="restaurants_card--txt">
+              <div class="restaurants_card--span">
+                <span class="restaurants_card--name">À la française</span>
+                <p class="restaurants_card--location">Cité Rouge</p>
+              </div>
+              <div class="restaurants_card--heart">
+                <i class="far fa-heart fa-lg icon--empty"></i>
+                <i class="fas fa-heart fa-lg icon--full"></i>
+              </div>
+            </div>
+          </div>
+          <div class="restaurants_card">
+            <a href="./délice_des_sens.html">
+              <div class="restaurants_card--new">Nouveau</div>
+              <img
+                src="./img/restaurants/delice_sens.jpg"
+                alt="Assiette dressée sur une table"
+              />
+            </a>
+            <div class="restaurants_card--txt">
+              <div class="restaurants_card--span">
+                <span class="restaurants_card--name">Le délice des sens</span>
+                <p class="restaurants_card--location">Folie-Méricourt</p>
               </div>
               <div class="restaurants_card--heart">
                 <i class="far fa-heart fa-lg icon--empty"></i>
@@ -105,7 +166,7 @@
     </main>
 
     <footer>
-      <p>ohmyfood</p>
+      <span>ohmyfood</span>
       <ul>
         <li>
           <i class="fas fa-utensils fa-fw"></i>

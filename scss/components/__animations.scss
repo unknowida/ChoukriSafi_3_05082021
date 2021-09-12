@@ -1,7 +1,102 @@
+// loading spinner
+// height: 100vh;
+// display: flex;
+// align-items: center;
+// justify-content: center;
+// position: relative;
+// background-color: #02143c;
+
+// body {
+// }
+.container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: white;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  animation: container 2s linear;
+  visibility: hidden;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 70%;
+  animation: circle 2s linear;
+  display: flex;
+
+  &--red {
+    border: 20px solid rgba(252, 33, 33, 0.2);
+    border-right: 20px solid $color-secondary;
+    animation-delay: 0.5s;
+    width: 150px;
+    height: 150px;
+  }
+
+  &--green {
+    border: 20px solid rgba(198, 200, 99, 0.2);
+    border-right: 20px solid $color-tertiary;
+    animation-delay: 1s;
+    width: 100px;
+    height: 100px;
+  }
+
+  &--blue {
+    border: 20px solid rgba(18, 198, 255, 0.2);
+    border-right: 20px solid $color-primary;
+    animation-delay: 0.8s;
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@keyframes container {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+
+  70% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes circle {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// animation heart
+
 .fa-heart {
   width: 35px;
   height: 35px;
   position: relative;
+
   &.icon--empty {
     font-size: 25px;
     position: absolute;
@@ -10,6 +105,7 @@
     opacity: 1;
     transition: opacity 0.2s ease-out;
   }
+
   &.icon--full {
     font-size: 25px;
     position: absolute;
@@ -23,20 +119,24 @@
     transition: all 0.5s ease-in-out;
     transform: scale(0);
   }
+
   &:hover,
   &:active {
     cursor: pointer;
   }
 }
 
-.menu--heart:hover, .menu--heart:active .restaurants_card--heart:hover, .restaurants_card--heart:active { 
-    .icon--full {
-        transform: scale(1.05);
-        opacity: 1;
-    }
-    .icon--empty {
-        opacity: 0;
-    }
+.menu--heart:hover,
+.menu--heart:active .restaurants_card--heart:hover,
+.restaurants_card--heart:active {
+  .icon--full {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .icon--empty {
+    opacity: 0;
+  }
 }
 
 // .like {

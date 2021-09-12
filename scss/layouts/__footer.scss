@@ -6,16 +6,14 @@ footer {
   color: $color-police-footer;
   padding: 10px 0 20px 30px;
 
-
-  p {
+  span {
     font-family: Shrikhand;
     font-size: 2rem bolder;
     padding: 15px 0;
   }
   a {
     color: $color-police-footer;
-    font-size: 0.9rem ;
-
+    font-size: 0.9rem;
   }
   li {
     padding: 3px 0;
@@ -24,6 +22,5 @@ footer {
   i {
     padding: 0 10px 0 0;
     color: $color-police-footer;
-
   }
 }
