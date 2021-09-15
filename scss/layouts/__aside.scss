@@ -65,7 +65,7 @@
     counter-increment: step-counter;
     content: counter(step-counter);
     position: absolute;
-    // float: left;
+    float: left;
     left: 15px;
     text-align: center;
     font-size: 1rem;
