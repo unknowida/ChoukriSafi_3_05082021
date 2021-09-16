@@ -49,6 +49,7 @@
     border-radius: 25px;
     padding: 24px 10px 20px 10px;
     box-shadow: 0 5px 15px 0 #c3c3c3;
+    // position: absolute;
 
     &:hover {
       @include button-hover;
@@ -66,7 +67,7 @@
     content: counter(step-counter);
     position: absolute;
     float: left;
-    left: 15px;
+    left: -15px;
     text-align: center;
     font-size: 1rem;
     border-radius: 50%;
