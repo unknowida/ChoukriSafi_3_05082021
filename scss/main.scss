@@ -2,9 +2,10 @@
 @import './base/typography';
 @import './utils/__var';
 @import './utils/_mixins';
-// @import './components/_animations';
 @import './components/__buttons';
-@import './layouts/_section';
+@import './layouts/_restaurants';
 @import './layouts/__footer';
-@import './layouts/__header';
 @import './layouts/__aside';
+@import './components/_heart';
+@import './components/_loadingpage';
+@import './layouts/__header';

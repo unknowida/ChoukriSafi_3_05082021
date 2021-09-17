@@ -1,0 +1,48 @@
+// Animation heart
+
+.fa-heart {
+    width: 35px;
+    height: 35px;
+    position: relative;
+
+    &.icon--full {
+        font-size: 25px;
+        position: absolute;
+        display: block;
+        background-image: $button-gradient;
+        background-clip: text;
+        color: transparent;
+        opacity: 0;
+        margin: 20px 0 0 35px;
+        padding: 2px 0 0 0;
+        transition: all 0.5s ease-in-out;
+        transform: scale(0);
+    }
+
+    &.icon--empty {
+        font-size: 25px;
+        position: relative;
+        margin: 20px 0 0 35px;
+        padding: 2px 0 0 0;
+        opacity: 1;
+        transition: opacity 0.2s ease-out;
+    }
+
+    &:hover,
+    &:active {
+        cursor: pointer;
+    }
+}
+
+.menu--heart:hover,
+.menu--heart:active .restaurants_card--heart:hover,
+.restaurants_card--heart:active {
+    .icon--full {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    .icon--empty {
+        opacity: 0;
+    }
+}

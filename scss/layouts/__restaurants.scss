@@ -1,7 +1,7 @@
 .restaurants {
   margin: 0 auto;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 100%;
   @include flexbox-center;
   flex-direction: column;
   align-items: flex-start;
@@ -12,7 +12,7 @@
   background-color: $color-grey;
   padding: 0 0 30px 0;
 
-  &_card {
+  &__card {
     display: flex;
     flex-direction: column;
     height: 251px;
@@ -22,10 +22,6 @@
     border-radius: 20px;
     box-shadow: 0 0 10px 5px $color-grey;
     position: relative;
-
-    &--location {
-      font-weight: 300;
-    }
 
     &--new {
       color: $color-new;
@@ -47,37 +43,37 @@
       object-fit: cover;
       border-radius: 15px 15px 0 0;
     }
+  }
 
-    &--heart {
-      width: 70px;
-      height: 70px;
-      padding-right: 10px;
-      position: relative;
+  &__underblock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 77px;
+    span {
+      margin: 0 0 5px 3px;
     }
-
-    &--txt {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 77px;
-    }
-
-    &--span {
+    &--info {
       padding: 15px 0 0 10px;
-
-      span {
-        margin: 0 0 5px 3px;
-      }
     }
-
     &--name {
       font-weight: bolder;
     }
+    &--location {
+      font-weight: 300;
+    }
+    &--heart {
+      @include flexbox-center;
+      width: 70px;
+      height: 70px;
+      padding-right: 10px;
+    }
   }
 
-  h2 {
-    margin: 10px;
-  }
+  // h2 {
+  //   margin: 10px;
+  // }
 }
 
 // .line1{

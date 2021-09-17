@@ -1,16 +1,15 @@
 .fonctionnement_containers {
   @include flexbox-center;
+  max-width: 100%;
   padding: 25px 0;
-  width: 100%;
   background: white;
   flex-direction: column;
 }
 
 .fonctionnement {
   width: 95%;
-  max-width: 1200px;
   background-color: white;
-  padding: 0;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   counter-reset: step-counter;
@@ -65,7 +64,7 @@
   li::before {
     counter-increment: step-counter;
     content: counter(step-counter);
-    position: absolute;
+    position: relative;
     float: left;
     left: -15px;
     text-align: center;
@@ -78,6 +77,10 @@
     box-shadow: 0 5px 15px 0 #c3c3c3;
     background-color: $color-primary;
   }
+}
+ol {
+  display: flex;
+  flex-direction: column;
 }
 
 //   li {
