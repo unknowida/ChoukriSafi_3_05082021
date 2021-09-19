@@ -2,6 +2,10 @@
   transition: 0.5s 0.01s ease;
 }
 
+.fa-lg{
+  line-height: 1;
+}
+
 .restaurants {
   &__card {
     display: flex;
@@ -66,7 +70,7 @@
 
       i {
         color: #9d9d9d;
-        font-size: 25px;
+        font-size: 24px;
       }
 
       .icon--full {
@@ -76,10 +80,11 @@
 
         &:hover {
           background: $button-gradient;
-          background-clip: text;
           -webkit-text-fill-color: transparent;
+          background-clip: text;
           -webkit-background-clip: text;
           opacity: 1;
+          z-index: 1;
           @extend %likeanimated;
         }
       }
