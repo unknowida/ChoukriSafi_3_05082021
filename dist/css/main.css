@@ -155,32 +155,9 @@ button:hover {
           box-shadow: 0px 0px 10px 0px black rgba 0, 0, 0, 0, 6;
 }
 
-.restaurants {
-  margin: 0 auto;
-  padding: 20px;
-  max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-color: #f6f6f6;
-}
-
-.restaurants {
-  background-color: #f6f6f6;
-  padding: 0 0 30px 0;
+.restaurants__underblock--hearts .icon--full:hover, .restaurants__underblock--hearts:hover, .restaurants__underblock--hearts .icon--empty:hover {
+  -webkit-transition: 0.5s 0.01s ease;
+  transition: 0.5s 0.01s ease;
 }
 
 .restaurants__card {
@@ -191,7 +168,7 @@ button:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 251px;
+  height: 250px;
   width: 85%;
   background-color: white;
   margin: 20px auto;
@@ -237,7 +214,7 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 77px;
+  height: 60px;
 }
 
 .restaurants__underblock span {
@@ -256,19 +233,40 @@ button:hover {
   font-weight: 300;
 }
 
-.restaurants__underblock--heart {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 70px;
-  height: 70px;
-  padding-right: 10px;
+.restaurants__underblock--hearts {
+  position: relative;
+  margin-right: 22px;
+  margin-top: 4px;
+}
+
+.restaurants__underblock--hearts i {
+  color: #9d9d9d;
+  font-size: 25px;
+}
+
+.restaurants__underblock--hearts .icon--full {
+  left: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.restaurants__underblock--hearts .icon--full:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  opacity: 1;
+}
+
+.restaurants__underblock--hearts:hover {
+  cursor: pointer;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.restaurants__underblock--hearts .icon--empty:hover {
+  opacity: 0;
 }
 
 footer {
@@ -425,57 +423,6 @@ ol {
           flex-direction: column;
 }
 
-.fa-heart {
-  width: 35px;
-  height: 35px;
-  position: relative;
-}
-
-.fa-heart.icon--full {
-  font-size: 25px;
-  position: absolute;
-  display: block;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-clip: text;
-  color: transparent;
-  opacity: 0;
-  margin: 20px 0 0 35px;
-  padding: 2px 0 0 0;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-}
-
-.fa-heart.icon--empty {
-  font-size: 25px;
-  position: relative;
-  margin: 20px 0 0 35px;
-  padding: 2px 0 0 0;
-  opacity: 1;
-  -webkit-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
-}
-
-.fa-heart:hover, .fa-heart:active {
-  cursor: pointer;
-}
-
-.menu--heart:hover .icon--full,
-.menu--heart:active .restaurants_card--heart:hover .icon--full,
-.restaurants_card--heart:active .icon--full {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  opacity: 1;
-}
-
-.menu--heart:hover .icon--empty,
-.menu--heart:active .restaurants_card--heart:hover .icon--empty,
-.restaurants_card--heart:active .icon--empty {
-  opacity: 0;
-}
-
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -536,66 +483,6 @@ ol {
           animation-delay: 0.8s;
   width: 200px;
   height: 200px;
-}
-
-@-webkit-keyframes container {
-  0% {
-    visibility: visible;
-    opacity: 0.9;
-  }
-  70% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes container {
-  0% {
-    visibility: visible;
-    opacity: 0.9;
-  }
-  70% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes circle {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-            transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes circle {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-            transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
 .header {
