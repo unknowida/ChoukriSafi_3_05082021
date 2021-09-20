@@ -209,6 +209,7 @@ h2 {
   position: relative;
   margin-right: 22px;
   margin-top: 4px;
+  cursor: pointer;
 }
 
 .restaurants__underblock--hearts i {
@@ -223,8 +224,7 @@ h2 {
 }
 
 .restaurants__underblock--hearts .icon--full:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -247,8 +247,7 @@ button {
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
   text-decoration: none;
   cursor: pointer;
   border: 0;
@@ -519,6 +518,12 @@ ol {
   width: 160px;
 }
 
+.header__logo i {
+  position: absolute;
+  left: 16px;
+  top: 30px;
+}
+
 .search__geo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -589,8 +594,7 @@ ol {
 
 .reservation__button {
   opacity: 1;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
   color: white;
   padding: 0 20px;
   border-radius: 200px;
