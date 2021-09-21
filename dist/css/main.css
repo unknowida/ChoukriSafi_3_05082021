@@ -136,9 +136,9 @@ h2 {
           flex-direction: column;
 }
 
-.restaurants__underblock--hearts .icon--full:hover, .restaurants__underblock--hearts:hover {
-  -webkit-transition: 1s 0.01s ease;
-  transition: 1s 0.01s ease;
+.restaurants__underblock--hearts .icon--full:hover {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .fa-lg {
@@ -257,12 +257,12 @@ h2 {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0);
+          transform: scale(0);
   z-index: 1;
 }
 
-.restaurants__underblock--hearts:hover {
+.restaurants__underblock--hearts .icon--full:hover:hover {
   cursor: pointer;
   overflow: hidden;
   opacity: 1;
@@ -410,6 +410,7 @@ footer i {
   padding: 24px 10px 20px 10px;
   -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
           box-shadow: 0 5px 15px 0 #c3c3c3;
+  position: relative;
 }
 
 .fonctionnement li:hover {
@@ -430,9 +431,8 @@ footer i {
 .fonctionnement li::before {
   counter-increment: step-counter;
   content: counter(step-counter);
-  position: relative;
-  float: left;
-  left: -15px;
+  position: absolute;
+  left: calc(-25px/2);
   text-align: center;
   font-size: 1rem;
   border-radius: 50%;

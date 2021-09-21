@@ -7,7 +7,7 @@
 }
 
 %likeanimated {
-  transition: 1s 0.01s ease;
+  transition: 1s ease;
 }
 
 .fa-lg {
@@ -17,7 +17,7 @@
 .restaurants {
   display: flex;
   flex-direction: column;
-  
+
   padding: 25px 10px;
 
   &__title {
@@ -99,24 +99,23 @@
         position: absolute;
 
         &:hover {
+          &:hover {
+            cursor: pointer;
+            overflow: hidden;
+            opacity: 1;
+            transform: scale(1);
+
+            @extend %likeanimated;
+          }
           background: $button-gradient;
           -webkit-text-fill-color: transparent;
           background-clip: text;
           -webkit-background-clip: text;
           opacity: 1;
-          transform: scale(1);
+          transform: scale(0);
           z-index: 1;
           @extend %likeanimated;
         }
-      }
-
-      &:hover {
-        cursor: pointer;
-        overflow: hidden;
-        opacity: 1;
-        transform: scale(1);
-
-        @extend %likeanimated;
       }
     }
   }
