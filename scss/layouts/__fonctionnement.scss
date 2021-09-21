@@ -1,4 +1,6 @@
-.fonctionnement_containers {
+
+
+.fonctionnement__containers {
   @include flexbox-center;
   max-width: 100%;
   padding: 25px 0;
@@ -18,17 +20,7 @@
     margin: 0;
   }
 
-  // &__step {
-  // display: flex;
-  // align-items: center;
-  // background: #f6f6f6;
-  // height: auto;
-  // width: auto;
-  // margin: 10px 20px;
-  // border-radius: 20px;
-  // position: relative;
-  // box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-  // }
+
   &__steps {
     display: flex;
     justify-content: center;
@@ -48,7 +40,6 @@
     border-radius: 25px;
     padding: 24px 10px 20px 10px;
     box-shadow: 0 5px 15px 0 #c3c3c3;
-    // position: absolute;
 
     &:hover {
       @include button-hover;

@@ -1,7 +1,11 @@
-// header {
-  // z-index: 10;
-  // background: white;
-  // width: 100%;
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  background: white;
+  width: 100%;
+}
 
   .header {
     display: flex;
@@ -24,9 +28,11 @@
 
 
     &__logo {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       background: rgb(255, 255, 255);
       width: 100%;
-      text-align: center;
       box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
       border-bottom: 2px solid #f4f4f4;
       padding: 5px 46px;
@@ -47,7 +53,6 @@
   .search__geo {
     @include flexbox-center;
     margin: 0 auto;
-    width: 1440px;
     background-color: $color-maps-text;
 
     .search__icons {
@@ -56,7 +61,7 @@
     }
 
     .input-field {
-      flex: 1 0 0;
+      // flex: 1 0 0;
 
       input {
         @include flexbox-center;
@@ -64,7 +69,7 @@
         background-color: transparent;
         border: 0;
         padding: 15px 0px;
-        width: 100%;
+        // width: 100%;
       }
     }
   }
@@ -88,4 +93,3 @@
       }
     }
   }
-// }
