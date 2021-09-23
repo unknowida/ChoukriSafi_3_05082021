@@ -249,25 +249,24 @@ h2 {
   left: 0;
   opacity: 0;
   position: absolute;
-}
-
-.restaurants__underblock--hearts .icon--full:hover {
-  background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 1;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  z-index: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .restaurants__underblock--hearts .icon--full:hover:hover {
   cursor: pointer;
   overflow: hidden;
   opacity: 1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 1;
   -webkit-transform: scale(1);
           transform: scale(1);
+  z-index: 1;
 }
 
 button {
@@ -531,6 +530,16 @@ header {
   z-index: 10;
   background: white;
   width: 100%;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  left: 35px;
+  top: 20px;
+}
+
+.fa-arrow-left a {
+  color: #000;
 }
 
 .header {
