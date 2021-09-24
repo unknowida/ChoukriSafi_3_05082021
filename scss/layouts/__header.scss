@@ -5,14 +5,19 @@ header {
   z-index: 10;
   background: white;
   width: 100%;
+  i {
+    position: absolute;
+    left: 16px;
+    top: 30px;
+  }
 }
 
 .fa-arrow-left {
   position: absolute;
   // width: 50px;
   // height: 50px;
-  left: 35px;
-  top: 20px;
+  // left: 35px;
+  // top: 20px;
   // top: 50%;
   // font-size: 20px;
 
@@ -45,13 +50,22 @@ header {
     }
 
 
-    i {
-      position: absolute;
-      left: 16px;
-      top: 30px;
-    }
+   
   }
 }
+
+/*****image page menu******/
+
+.img-menu-restaurant{
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0;
+  height: 220px;
+}
+
+
+
 
 .search__geo {
   @include flexbox-center;
