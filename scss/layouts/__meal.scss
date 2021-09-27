@@ -1,25 +1,71 @@
-.menu {
-  padding: 10px 0;
-  background-color: #f6f6f6;
-  border-radius: 33px 33px 0 0;
-  margin: -30px 0 0 0;
-  position: relative;
+.mealContainer {
+  background: white;
+  width: 100%;
+  @include flexbox-center;
+}
 
+.meal {
+  margin-top: -200px;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 1230px;
+  border-radius: 25px 25px 0 0;
+  background-color: $color-grey;
 
-  &--title{
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      align-items: center;
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &--title {
+      font-family: 'Shrikhand', cursive;
+    }
   }
 
-//   &__underblock {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     align-items: center;
-//     height: 60px;
+  &__underblock {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 500px;
 
-//     @include heart-anime;
-//   }
+    &--hearts {
+      position: relative;
+      margin-right: 10px;
+      margin-top: 4px;
+      cursor: pointer;
+
+      @include heart-anime;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-gap: 40px;
+
+    &--bloc {
+      display: grid;
+      grid-gap: 15px;
+    }
+
+    &--title {
+      & h3 {
+        position: relative;
+        font-weight: 400;
+        text-transform: uppercase;
+
+        &::after {
+          content: '';
+          width: 50px;
+          height: 4px;
+          background: $surlignGreen;
+          position: absolute;
+          z-index: 1;
+          left: 0px;
+          bottom: -8px;
+        }
+      }
+    }
+  }
 }

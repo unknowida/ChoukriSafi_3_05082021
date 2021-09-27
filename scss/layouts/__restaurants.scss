@@ -79,10 +79,15 @@
     &--location {
       font-weight: 300;
     }
+    &--hearts {
+      position: relative;
+      margin-right: 22px;
+      margin-top: 4px;
+      cursor: pointer;
 
     @include heart-anime
 
-
+    }
 
     // &--hearts {
     //   position: relative;
