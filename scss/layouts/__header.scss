@@ -33,14 +33,11 @@
 
 /*****image page menu******/
 
-.img {
-  width: 100%;
-  height: 50vh;
+.imgBg {
+
 
   &__image {
-    margin-top: -80px;
-    width: 100%;
-    height: 50vh;
+
     object-fit: cover;
   }
 }

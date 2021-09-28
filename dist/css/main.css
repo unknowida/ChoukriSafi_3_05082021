@@ -98,7 +98,6 @@ body {
   line-height: 1.5;
   margin: 0 auto;
   text-align: left;
-  overflow-x: hidden;
   max-width: 1440px;
 }
 
@@ -134,11 +133,6 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.restaurants__underblock--hearts .icon--full:hover, .meal__underblock--hearts .icon--full:hover {
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
 }
 
 .fa-lg {
@@ -249,16 +243,18 @@ h2 {
   left: 0;
   opacity: 0;
   position: absolute;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease, -webkit-transform 400ms ease;
 }
 
-.restaurants__underblock--hearts .icon--full:hover:hover {
+.restaurants__underblock--hearts:hover .icon--full {
   cursor: pointer;
   overflow: hidden;
   opacity: 1;
-  -webkit-transform: scale(0);
-          transform: scale(0);
   background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -379,15 +375,7 @@ footer i {
 }
 
 /*****image page menu******/
-.img {
-  width: 100%;
-  height: 50vh;
-}
-
-.img__image {
-  margin-top: -80px;
-  width: 100%;
-  height: 50vh;
+.imgBg__image {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -665,10 +653,10 @@ ol {
 }
 
 .meal {
-  margin-top: -200px;
+  margin-top: -30px;
   padding: 0 20px;
   width: 100%;
-  max-width: 1230px;
+  max-width: 1440px;
   border-radius: 25px 25px 0 0;
   background-color: #f6f6f6;
 }
@@ -726,16 +714,18 @@ ol {
   left: 0;
   opacity: 0;
   position: absolute;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, -webkit-transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease;
+  transition: opacity 400ms ease, transform 400ms ease, -webkit-transform 400ms ease;
 }
 
-.meal__underblock--hearts .icon--full:hover:hover {
+.meal__underblock--hearts:hover .icon--full {
   cursor: pointer;
   overflow: hidden;
   opacity: 1;
-  -webkit-transform: scale(0);
-          transform: scale(0);
   background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
