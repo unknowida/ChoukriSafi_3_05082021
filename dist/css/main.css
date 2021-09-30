@@ -600,6 +600,43 @@ ol {
           transform: scale(1);
 }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background-color: #333232;
+  color: #cccccc;
+  padding: 10px 0 20px 30px;
+}
+
+footer span {
+  font-family: Shrikhand;
+  font-size: 2rem bolder;
+  padding: 15px 0;
+}
+
+footer a {
+  color: #cccccc;
+  font-size: 0.9rem;
+}
+
+footer li {
+  padding: 3px 0;
+  font-size: 0.7rem;
+}
+
+footer i {
+  padding: 0 10px 0 0;
+  color: #cccccc;
+}
+
 .mealContainer {
   background: white;
   width: 100%;
@@ -637,6 +674,7 @@ ol {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin: 15px 0;
 }
 
 .meal__header--title {
@@ -710,7 +748,7 @@ ol {
 }
 
 .meal__grid--title {
-  margin: 20px 0;
+  margin: 0 0 15px 0;
 }
 
 .meal__grid--title h3 {
@@ -728,42 +766,5 @@ ol {
   z-index: 1;
   left: 0px;
   bottom: -8px;
-}
-
-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background-color: #333232;
-  color: #cccccc;
-  padding: 10px 0 20px 30px;
-}
-
-footer span {
-  font-family: Shrikhand;
-  font-size: 2rem bolder;
-  padding: 15px 0;
-}
-
-footer a {
-  color: #cccccc;
-  font-size: 0.9rem;
-}
-
-footer li {
-  padding: 3px 0;
-  font-size: 0.7rem;
-}
-
-footer i {
-  padding: 0 10px 0 0;
-  color: #cccccc;
 }
 /*# sourceMappingURL=main.css.map */
