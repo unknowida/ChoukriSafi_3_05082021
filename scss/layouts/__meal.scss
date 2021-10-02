@@ -72,4 +72,40 @@
 
     }
   }
+
+  &__shutter {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+
+    &__dish--subtitle{
+      
+
+    }
+    &__dish--subtitle{
+
+    }
+
+
+  }
+
 }
+
+.dish-price {
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
