@@ -52,3 +52,65 @@
 
 
 }
+
+@mixin Check-anime {
+
+  &:hover .validCheck{
+    @include flexbox-center;
+    animation: slide-left 0.7s ease;
+    transform-origin: right;
+  }
+  &:hover .meal__shutter__dish--price{
+    padding-right: 70px;
+    transition: 0.7s ease;
+  }
+
+  .validCheck{
+    display: none;
+    position: absolute;
+    background-color: $color-tertiary;
+    border-radius: 0 15px 15px 0;
+    right: 0px;
+    padding: 0 13px;
+    height: 100%;
+
+    i {
+      font-size: 30px;
+      color: white;
+      transform: rotate(180deg);
+      animation: rotate 0.5s both;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes slide-left {
+    0% {
+      transform: scaleX(0);
+    }
+  
+    100% {
+      transform: scaleX(-50px);
+    }
+  }
+  
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+}

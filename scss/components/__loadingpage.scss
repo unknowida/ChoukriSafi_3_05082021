@@ -1,13 +1,3 @@
-// loading spinner
-// height: 100vh;
-// display: flex;
-// align-items: center;
-// justify-content: center;
-// position: relative;
-// background-color: #02143c;
-
-// body {
-// }
 .container {
   display: flex;
   position: relative;
@@ -57,38 +47,38 @@
   }
 }
 
-// @keyframes container {
-//   0% {
-//     visibility: visible;
-//     opacity: 0.9;
-//   }
+@keyframes container {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
 
-//   70% {
-//     opacity: 0.9;
-//   }
+  70% {
+    opacity: 0.9;
+  }
 
-//   100% {
-//     opacity: 0;
-//     visibility: hidden;
-//   }
-// }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
-// @keyframes circle {
-//   0% {
-//     visibility: visible;
-//     opacity: 1;
-//   }
+@keyframes circle {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
 
-//   70% {
-//     opacity: 1;
-//   }
+  70% {
+    opacity: 1;
+  }
 
-//   100% {
-//     transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-//     opacity: 0;
-//     visibility: hidden;
-//   }
-// }
+  100% {
+    transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 
 
 // .like {

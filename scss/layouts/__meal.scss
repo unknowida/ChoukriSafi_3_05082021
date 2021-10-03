@@ -69,43 +69,59 @@
           bottom: -8px;
         }
       }
+    }
 
+    &__shutter {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 70px;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+
+      @include Check-anime
     }
   }
 
   &__shutter {
-    position: relative;
-    cursor: pointer;
-    overflow: hidden;
+    &--dish {
+      margin-left: 20px;
+      white-space: nowrap;
+      overflow: hidden;
+
+      & p {
+        margin: 0;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      &--title {
+        font-weight: bold;
+      }
+
+      &--subtitle {
+        font-weight: 100;
+      }
+    }
+
+    &__dish {
+      &--price {
+        padding-right: 20px;
+        font-weight: bold;
+        padding-left: 7px;
+      }
+    }
+  }
+
+  .dish-price {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 70px;
-    border-radius: 15px;
-    background-color: white;
-    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
-
-    &__dish--subtitle{
-      
-
-    }
-    &__dish--subtitle{
-
-    }
-
-
   }
-
 }
-
-.dish-price {
-
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
-
-
