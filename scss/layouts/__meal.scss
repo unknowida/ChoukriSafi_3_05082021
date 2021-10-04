@@ -98,22 +98,28 @@
         margin: 0;
         text-overflow: ellipsis;
         overflow: hidden;
+
       }
 
-      &--title {
-        font-weight: bold;
-      }
 
-      &--subtitle {
-        font-weight: 100;
-      }
     }
 
     &__dish {
+
+      &--title {
+        font-weight: normal;
+      }
+
+      &--subtitle {
+        font-weight: lighter;
+
+      }
+
       &--price {
         padding-right: 20px;
         font-weight: bold;
         padding-left: 7px;
+        padding-top: 20px;
       }
     }
   }

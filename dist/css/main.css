@@ -99,6 +99,7 @@ body {
   margin: 0 auto;
   text-align: left;
   max-width: 1440px;
+  -webkit-box-direction: normal;
 }
 
 h1 {
@@ -964,18 +965,19 @@ footer i {
   overflow: hidden;
 }
 
-.meal__shutter--dish--title {
-  font-weight: bold;
+.meal__shutter__dish--title {
+  font-weight: normal;
 }
 
-.meal__shutter--dish--subtitle {
-  font-weight: 100;
+.meal__shutter__dish--subtitle {
+  font-weight: lighter;
 }
 
 .meal__shutter__dish--price {
   padding-right: 20px;
   font-weight: bold;
   padding-left: 7px;
+  padding-top: 20px;
 }
 
 .meal .dish-price {
