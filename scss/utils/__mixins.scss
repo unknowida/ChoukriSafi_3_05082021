@@ -53,7 +53,7 @@
 
 }
 
-@mixin Check-anime {
+@mixin validCheck-anime {
 
   &:hover .validCheck{
     @include flexbox-center;
@@ -75,7 +75,7 @@
     height: 100%;
 
     i {
-      font-size: 30px;
+      font-size: 20px;
       color: white;
       transform: rotate(180deg);
       animation: rotate 0.5s both;
