@@ -803,30 +803,40 @@ footer i {
           transform: scale(1);
 }
 
-.meal__grid {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 40px;
+.meal__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
 }
 
-.meal__grid--bloc {
-  display: -ms-grid;
-  display: grid;
-  grid-gap: 15px;
+.meal__flex--bloc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
 }
 
-.meal__grid--title {
+.meal__flex--title {
   margin: 0 0 15px 0;
 }
 
-.meal__grid--title h3 {
+.meal__flex--title h3 {
   position: relative;
   padding-top: 40px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
-.meal__grid--title h3::after {
+.meal__flex--title h3::after {
   content: '';
   width: 50px;
   height: 4px;
@@ -837,7 +847,7 @@ footer i {
   bottom: -8px;
 }
 
-.meal__grid__shutter {
+.meal__flex__shutter {
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -858,7 +868,7 @@ footer i {
           box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 }
 
-.meal__grid__shutter:hover .validCheck {
+.meal__flex__shutter:hover .validCheck {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -868,35 +878,35 @@ footer i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: slide-left 0.7s ease;
-          animation: slide-left 0.7s ease;
+  -webkit-animation: slide-left 0.6s ease;
+          animation: slide-left 0.6s ease;
   -webkit-transform-origin: right;
           transform-origin: right;
 }
 
-.meal__grid__shutter:hover .meal__shutter__dish--price {
+.meal__flex__shutter:hover .meal__shutter__dish--price {
   padding-right: 70px;
   -webkit-transition: 0.7s ease;
   transition: 0.7s ease;
 }
 
-.meal__grid__shutter .validCheck {
+.meal__flex__shutter .validCheck {
   display: none;
   position: absolute;
   background-color: #99e2d0;
   border-radius: 0 15px 15px 0;
   right: 0px;
-  padding: 0 13px;
+  padding: 0 20px;
   height: 100%;
 }
 
-.meal__grid__shutter .validCheck i {
+.meal__flex__shutter .validCheck i {
   font-size: 20px;
   color: white;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  -webkit-animation: rotate 0.5s both;
-          animation: rotate 0.5s both;
+  -webkit-animation: rotate 0.8s both;
+          animation: rotate 0.8s both;
 }
 
 @-webkit-keyframes rotate {
@@ -927,8 +937,8 @@ footer i {
             transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scaleX(-50px);
-            transform: scaleX(-50px);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
@@ -938,8 +948,8 @@ footer i {
             transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scaleX(-50px);
-            transform: scaleX(-50px);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 

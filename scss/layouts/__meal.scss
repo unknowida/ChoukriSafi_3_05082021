@@ -41,13 +41,15 @@
     }
   }
 
-  &__grid {
-    display: grid;
-    grid-gap: 40px;
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 
     &--bloc {
-      display: grid;
-      grid-gap: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
 
     &--title {
@@ -85,7 +87,7 @@
       background-color: white;
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
 
-      @include validCheck-anime
+      @include validCheck-anime;
     }
   }
 
@@ -99,21 +101,16 @@
         margin: 0;
         text-overflow: ellipsis;
         overflow: hidden;
-
       }
-
-
     }
 
     &__dish {
-
       &--title {
         font-weight: normal;
       }
 
       &--subtitle {
         font-weight: lighter;
-
       }
 
       &--price {
@@ -131,7 +128,4 @@
     justify-content: space-between;
     align-items: center;
   }
-  
-  
-
 }
