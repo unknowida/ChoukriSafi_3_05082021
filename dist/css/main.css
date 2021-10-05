@@ -249,6 +249,13 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
   text-decoration: none;
@@ -261,7 +268,7 @@ button {
   -webkit-box-shadow: 0 5px 15px 0 #7e7878;
           box-shadow: 0 5px 15px 0 #7e7878;
   font-weight: bold;
-  margin: 20px 0 55px 0;
+  margin: 20px 20% 55px 20%;
   padding: 18px 30px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -735,7 +742,7 @@ footer i {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 15px 0;
+  margin-top: 15px;
 }
 
 .meal__header--title {
@@ -814,7 +821,8 @@ footer i {
 
 .meal__grid--title h3 {
   position: relative;
-  font-weight: 400;
+  padding-top: 40px;
+  font-weight: 300;
   text-transform: uppercase;
 }
 
