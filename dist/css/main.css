@@ -1010,4 +1010,31 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
 }
+
+.slide-top {
+  -webkit-animation: slide-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+}
 /*# sourceMappingURL=main.css.map */
