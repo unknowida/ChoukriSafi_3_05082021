@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
-  
+
 
 
 
@@ -91,12 +91,42 @@
       border-radius: 15px;
       background-color: white;
       box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.1);
+      animation: opacity 1000ms;
 
+      
+      @keyframes opacity {
+        from {
+          opacity: 0;
+        }
+        
+        to {
+          opacity: 1;
+        }
+      }
+  
+      &:nth-of-type(3) {
+        
+        animation-delay: 1s;
+      }
+      
+      &:nth-of-type(2) {
+        
+        animation-delay: 2s;
+      }
+      
+      &:nth-of-type(1) {
+        
+        animation-delay: 3s;
+      }
       @include validCheck-anime;
+  
     }
   }
 
+
   &__shutter {
+
+ 
     &--dish {
       margin-left: 20px;
       white-space: nowrap;
@@ -165,9 +195,4 @@
     -webkit-transform: translateY(-30px);
     transform: translateY(-30px);
   }
-}
-
-.fade-in{
-  
-
 }
