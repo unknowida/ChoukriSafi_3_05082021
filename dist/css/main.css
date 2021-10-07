@@ -245,6 +245,33 @@ h2 {
   }
 }
 
+.slide-top {
+  -webkit-animation: slide-top 2s ease-out both;
+          animation: slide-top 2s ease-out both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+}
+
 button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -870,39 +897,6 @@ footer i {
           animation: opacity 1000ms;
 }
 
-@-webkit-keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.meal__flex__shutter:nth-of-type(3) {
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-.meal__flex__shutter:nth-of-type(2) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
-}
-
-.meal__flex__shutter:nth-of-type(1) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
-}
-
 .meal__flex__shutter:hover .validCheck {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1028,30 +1022,42 @@ footer i {
           align-items: center;
 }
 
-.slide-top {
-  -webkit-animation: slide-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.fade-in-1 {
+  -webkit-animation: fade-in 1.2s ease-out both;
+          animation: fade-in 1.2s ease-out both;
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
 }
 
-@-webkit-keyframes slide-top {
+.fade-in-2 {
+  -webkit-animation: fade-in 1.9s ease-out both;
+          animation: fade-in 1.9s ease-out both;
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms;
+}
+
+.fade-in-3 {
+  -webkit-animation: fade-in 2.4s ease-out both;
+          animation: fade-in 2.4s ease-out both;
+  -webkit-animation-delay: 900ms;
+          animation-delay: 900ms;
+}
+
+@-webkit-keyframes fade-in {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    opacity: 1;
   }
 }
 
-@keyframes slide-top {
+@keyframes fade-in {
   0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
