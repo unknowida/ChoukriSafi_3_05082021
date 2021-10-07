@@ -17,7 +17,10 @@
   counter-reset: step-counter;
 
   &__title {
-    margin: 0;
+    display: flex;
+    padding-left: 24px;
+    padding-top: 30px;
+    // margin: 0;
   }
 
 

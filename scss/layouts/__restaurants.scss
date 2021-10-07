@@ -19,14 +19,16 @@
   padding: 25px 10px;
 
   &__title {
-    margin: 20px;
+    display: flex;
+    padding-left: 24px;
+    padding-top: 30px;
   }
 
   &__card {
     display: flex;
     flex-direction: column;
     height: 250px;
-    width: 85%;
+    width: 91%;
     background-color: white;
     margin: 20px auto;
     border-radius: 20px;
@@ -63,7 +65,7 @@
     height: 60px;
 
     span {
-      margin: 0 0 5px 3px;
+      margin: 0 0 5px 0;
     }
 
     &--info {
@@ -85,61 +87,21 @@
       cursor: pointer;
       @include heart-anime
     }
-
-    // &--hearts {
-    //   position: relative;
-    //   margin-right: 22px;
-    //   margin-top: 4px;
-    //   cursor: pointer;
-
-    //   i {
-    //     color: #9d9d9d;
-    //     font-size: 24px;
-    //   }
-    //   // .icon--empty:hover {
-    //   //   @extend %likeanimated;
-    //   // }
-    //   .icon--full {
-    //     left: 0;
-    //     opacity: 0;
-    //     position: absolute;
-    //     transform: scale(1);
-
-    //     &:hover {
-    //       &:hover {
-    //         cursor: pointer;
-    //         overflow: hidden;
-    //         opacity: 1;
-    //         transform: scale(0);
-
-    //         @extend %likeanimated;
-    //         background: $button-gradient;
-    //         -webkit-text-fill-color: transparent;
-    //         background-clip: text;
-    //         -webkit-background-clip: text;
-    //         opacity: 1;
-    //         transform: scale(1);
-    //         z-index: 1;
-    //         @extend %likeanimated;
-    //       }
-    //     }
-    //   }
-    // }
   }
-
-  // h2 {
-  //   margin: 10px;
-  // }
 }
 
-// .line1{
-//   display: flex;
-//   flex-direction: row;
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
-// }
+  .restaurants{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    // // gap: 30px;
+    
 
-// .line2{
-//   display: flex;
-//   flex-direction: row;
+    &__card{
+      border: 200px;
+    }
+  }
 
-// }
+}
