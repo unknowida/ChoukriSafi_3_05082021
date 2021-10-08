@@ -128,6 +128,13 @@
 
   }
 
+  .fade-in-4 {
+
+    animation: fade-in 2.9s ease-out both;
+    animation-delay: 1.2s;
+
+  }
+
 
 
   @keyframes fade-in {

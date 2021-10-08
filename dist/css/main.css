@@ -783,6 +783,13 @@ button:hover {
           animation-delay: 900ms;
 }
 
+.fade-in-4 {
+  -webkit-animation: fade-in 2.9s ease-out both;
+          animation: fade-in 2.9s ease-out both;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
 @-webkit-keyframes fade-in {
   0% {
     opacity: 0;
