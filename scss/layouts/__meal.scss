@@ -1,3 +1,8 @@
+.imgBg {
+  max-height: 60vh;
+  // margin-top: -10%;
+}
+
 .mealContainer {
   background: white;
   width: 100%;
@@ -19,6 +24,7 @@
     justify-content: space-between;
     margin-top: 15px;
 
+
     &--title {
       font-family: 'Shrikhand', cursive;
     }
@@ -36,6 +42,7 @@
       margin-right: 10px;
       margin-top: 4px;
       cursor: pointer;
+      z-index: 1;
 
       @include heart-anime;
     }
@@ -143,4 +150,3 @@
 
 @include fade-in-shutter;
 @include slide-top-shutter;
-
