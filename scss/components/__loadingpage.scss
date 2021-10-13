@@ -81,38 +81,3 @@
 }
 
 
-// .like {
-//   position: relative;
-//   margin-right: 22px;
-//   margin-top: 4px;
-
-//   i {
-//     color: #9d9d9d;
-//     font-size: 24px;
-//     left: 50%;
-//   }
-//   .hover-icon {
-//     left: 0;
-//     opacity: 0;
-//     position: absolute;
-//     &:hover {
-//       @include lineargarden;
-//       -webkit-text-fill-color: transparent;
-//       -webkit-background-clip: text;
-
-//       opacity: 1;
-//       z-index: 999;
-//       @extend %likeanimated;
-//     }
-//   }
-//   &:hover {
-//     cursor: pointer;
-//     overflow: hidden;
-//     opacity: 1;
-//     @extend %likeanimated;
-//   }
-//   .default-icon:hover {
-//     opacity: 0;
-//     @extend %likeanimated;
-//   }
-// }
