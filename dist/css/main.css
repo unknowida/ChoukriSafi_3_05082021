@@ -123,128 +123,6 @@ h2 {
 /*Gradient répétitif*/
 /*couleurs répétitive*/
 /*polices*/
-.container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
-  background: white;
-  margin: auto;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 20;
-  -webkit-animation: container 2s linear;
-          animation: container 2s linear;
-  visibility: hidden;
-}
-
-.circle {
-  position: absolute;
-  border-radius: 70%;
-  -webkit-animation: circle 2s linear;
-          animation: circle 2s linear;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.circle--red {
-  border: 20px solid rgba(252, 33, 33, 0.2);
-  border-right: 20px solid #ff79da;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  width: 150px;
-  height: 150px;
-}
-
-.circle--green {
-  border: 20px solid rgba(198, 200, 99, 0.2);
-  border-right: 20px solid #99e2d0;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  width: 100px;
-  height: 100px;
-}
-
-.circle--blue {
-  border: 20px solid rgba(18, 198, 255, 0.2);
-  border-right: 20px solid #9356dc;
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-  width: 200px;
-  height: 200px;
-}
-
-@-webkit-keyframes container {
-  0% {
-    visibility: visible;
-    opacity: 0.9;
-  }
-  70% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes container {
-  0% {
-    visibility: visible;
-    opacity: 0.9;
-  }
-  70% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@-webkit-keyframes circle {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-            transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes circle {
-  0% {
-    visibility: visible;
-    opacity: 1;
-  }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-            transform: rotate3D(1, 0.5, 0.75, 720deg) rotateZ(720deg);
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
 .slide-top {
   -webkit-animation: slide-top 2s ease-out both;
           animation: slide-top 2s ease-out both;
@@ -548,6 +426,11 @@ button:hover {
   position: relative;
 }
 
+.fonctionnement li i {
+  font-size: larger;
+  color: grey;
+}
+
 .fonctionnement li:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -555,25 +438,24 @@ button:hover {
   transition: 0.3s;
   -webkit-box-shadow: 5px 5px 10px 0 #99e2d0;
           box-shadow: 5px 5px 10px 0 #99e2d0;
-  background: white;
+  background: #e4d5f6;
 }
 
-.fonctionnement i {
-  font-size: larger;
-  color: grey;
+.fonctionnement li:hover i {
+  color: #9356dc;
 }
 
 .fonctionnement li::before {
   counter-increment: step-counter;
   content: counter(step-counter);
   position: absolute;
-  left: calc(-25px/2);
+  left: calc(-25px / 2);
   text-align: center;
   font-size: 1rem;
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  line-height: 30px;
+  line-height: 27px;
   color: white;
   -webkit-box-shadow: 0 5px 15px 0 #c3c3c3;
           box-shadow: 0 5px 15px 0 #c3c3c3;
@@ -859,6 +741,8 @@ ol {
 
 .meal__shutter__dish--title {
   font-weight: normal;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .meal__shutter__dish--subtitle {
@@ -1079,7 +963,6 @@ footer i {
 .reservation__button {
   opacity: 1;
   background: linear-gradient(174deg, #ff79da 0%, #9356dc 100%);
-  color: white;
   padding: 0 20px;
   border-radius: 200px;
 }

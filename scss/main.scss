@@ -1,11 +1,10 @@
-@import './base/reset';
-@import './base/typography';
+@import './base/_reset';
+@import './base/_typography';
 @import './utils/__var';
-@import './components/_loadingpage';
-@import './utils/_mixins';
-@import './layouts/_restaurants';
+// @import './components/__loadingpage';
+@import './utils/__mixins';
+@import './layouts/__restaurants';
 @import './components/__buttons';
-// @import './components/_heart';
 @import './layouts/__fonctionnement';
 @import './layouts/__meal';
 @import './layouts/__footer';
